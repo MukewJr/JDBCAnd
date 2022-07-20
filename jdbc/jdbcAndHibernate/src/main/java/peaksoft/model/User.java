@@ -5,13 +5,13 @@ import javax.persistence.*;
 @Table
 public class User {
     @Id
-    private Long id;
+    private long id;
 
     @Column
-    private String name;
+    private String first_name;
 
     @Column
-    private String lastName;
+    private String last_name;
 
     @Column
     private Byte age;
@@ -19,34 +19,35 @@ public class User {
     public User() {
     }
 
-    public User(String name, String lastName, Byte age) {
-        this.name = name;
-        this.lastName = lastName;
+    public User(long id, String first_name, String last_name, Byte age) {
+        this.id = id;
+        this.first_name = first_name;
+        this.last_name = last_name;
         this.age = age;
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirst_name() {
+        return first_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLast_name() {
+        return last_name;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
     }
 
     public Byte getAge() {
@@ -57,4 +58,13 @@ public class User {
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", first_name='" + first_name + '\'' +
+                ", last_name='" + last_name + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }

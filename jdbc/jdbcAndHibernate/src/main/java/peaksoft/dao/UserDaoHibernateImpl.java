@@ -21,9 +21,10 @@ public class UserDaoHibernateImpl implements UserDao {
     }
 
     @Override
-    public void saveUser(String name, String lastName, byte age) {
+    public void saveUser(long id, String first_name, String last_name, byte age) {
 
     }
+
 
     @Override
     public void removeUserById(long id) {
